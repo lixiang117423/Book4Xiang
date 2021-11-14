@@ -1,0 +1,65 @@
+book_filename: 'CBook'
+output_dir: "book4xiang"
+#output: bookdown::pdf_book
+toc: yes
+toc_depth: 4
+bibliography: ["mybib.bib"]
+language:
+  label:
+    thm: '定理'
+    def: '定义'
+    exm: '例'
+    proof: '证明: '
+    solution: '解: '
+    fig: '图'
+    tab: '表'
+  ui:
+    edit: "Edit"
+    chapter_name: ["第 ", " 章"]
+delete_merged_file: true
+new_session: true
+
+rmd_files: [
+  "index.Rmd",
+  
+  # Part I
+  "1.R-base.Rmd",            
+  "2.R-stat.Rmd",             
+  "3.R-vis.Rmd",
+  "4.R-deve.Rmd",
+  
+  # Part Ⅱ
+  "5.Python-base.Rmd",        
+  "6.Python-stat.Rmd",
+  "7.Python-spider.Rmd",
+  "8.Python-ai.Rmd",
+  
+  # Part Ⅲ
+  "9.bioinf-base.Rmd",        
+  "10.bioinf-env.Rmd",         
+  "11.bioinf-genomics.Rmd",    
+  "12.bioinf-rnaseq.Rmd",  
+  "13.bioinf-meta.Rmd", 
+  "14.bioinf-pro.Rmd",
+  "15.bioinf-multi.Rmd",
+  
+  # Part Ⅳ
+  "16.literature-patho.Rmd",
+  "17.literature-genomics.Rmd",
+  "18.literature-rnaseq.Rmd",
+  "19.literature-meta.Rmd",    
+  "20.literature-pro.Rmd",  
+  
+  # Part Ⅴ
+  "21.my-article.Rmd",
+  
+  # Part Ⅵ
+  "22.class-note.Rmd",
+  
+  
+  # Part Ⅶ
+  "23.Other.Rmd",
+  
+  "9990-references.Rmd"
+]
+

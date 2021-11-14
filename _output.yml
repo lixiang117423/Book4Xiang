@@ -1,0 +1,63 @@
+output:
+  pdf_document:
+    citation_package: natbib
+  bookdown::pdf_book:
+    citation_package: biblatex
+
+bookdown::bs4_book:
+  theme:
+    primary: "#4D6F8D"
+  #  bootswatch: cyborg
+  #  highlight: breezedark
+  #theme: !expr bslib::bs_theme(version = "4", bootswatch = "sketchy", bg = "#222529", fg = "#fff")
+  #theme: !expr bslib::bs_add_rules('@import "https://unpkg.com/nes.css@latest/css/nes.min.css"', theme = bslib::bs_theme(bg = "#0d0c0c", fg = "#e5e5e5", primary = "#dd2020", base_font = bslib::font_google("Press Start 2P"), code_font = bslib::font_google("Press Start 2P"), "font-size-base" = "0.75rem", "enable-rounded" = FALSE)) 
+  repo: https://github.com/lixiang117423/book4xiang
+  css: css/style.css
+  # bs4不支持下面的自定义
+  #includes:
+    #in_header: style/ga.html
+  #template: style/bs4_book.html
+  #css: style/style.css
+  
+bookdown::gitbook:
+  css: css/style.css
+  config:
+    toc:
+      collapse: section
+      before: |
+        <li><a href="./">Book for Xiang</a></li>
+      after: |
+        <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+    edit: https://www.web4xiang.com/%s
+    sharing:
+      facebook: no
+      twitter: no
+      github: yes
+      all: []
+    download: []
+
+#bookdown::pdf_book:
+bookdown::pdf_book:
+  includes:
+    in_header: preamble.tex
+  latex_engine: xelatex
+  citation_package: biblatex
+  keep_tex: true
+  css: css/style.css
+  #includes:
+    #in_header: latex/preamble.tex
+    #before_body: latex/before_body.tex
+    #after_body: latex/after_body.tex
+  #keep_tex: true
+  #dev: "cairo_pdf"
+  #latex_engine: xelatex
+  #citation_package: biblatex
+  #template: null
+  #pandoc_args: --top-level-division=chapter
+  #toc_depth: 3
+  #toc_unnumbered: false
+  #toc_appendix: true
+  #quote_footer: ["\\VA{", "}{}"]
+  #extra_dependencies: ["flafter"]
+bookdown::epub_book:
+  stylesheet: css/style.css

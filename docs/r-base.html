@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>第 1 章 语言基础 | 小蓝哥的知识荒原</title>
+<meta name="author" content="李详">
+<meta name="description" content='1.1 R的安装 各系统下R的安装，点击访问。 安装最新版R sudo sed -i "s/# deb-src/deb-src/g" /etc/apt/sources.list sudo apt-get update sudo apt-get build-dep r-base-dev cd ~/Downloads wget -c...'>
+<meta name="generator" content="bookdown 0.24 with bs4_book()">
+<meta property="og:title" content="第 1 章 语言基础 | 小蓝哥的知识荒原">
+<meta property="og:type" content="book">
+<meta property="og:image" content="https://raw.githubusercontent.com/DivadNojnarg/outstanding-shiny-ui/master/images/intro/crc-press-cover.svg">
+<meta property="og:description" content='1.1 R的安装 各系统下R的安装，点击访问。 安装最新版R sudo sed -i "s/# deb-src/deb-src/g" /etc/apt/sources.list sudo apt-get update sudo apt-get build-dep r-base-dev cd ~/Downloads wget -c...'>
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="第 1 章 语言基础 | 小蓝哥的知识荒原">
+<meta name="twitter:description" content='1.1 R的安装 各系统下R的安装，点击访问。 安装最新版R sudo sed -i "s/# deb-src/deb-src/g" /etc/apt/sources.list sudo apt-get update sudo apt-get build-dep r-base-dev cd ~/Downloads wget -c...'>
+<meta name="twitter:image" content="https://raw.githubusercontent.com/DivadNojnarg/outstanding-shiny-ui/master/images/intro/crc-press-cover.svg">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.11/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><link rel="stylesheet" href="css/style.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">小蓝哥的知识荒原</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">简介</a></li>
+<li class="book-part">Part I: R</li>
+<li><a class="active" href="r-base.html"><span class="header-section-number">1</span> 语言基础</a></li>
+<li><a class="" href="r-stat.html"><span class="header-section-number">2</span> 统计分析</a></li>
+<li><a class="" href="r-vis.html"><span class="header-section-number">3</span> 数据可视化</a></li>
+<li><a class="" href="r-deve.html"><span class="header-section-number">4</span> R语言开发</a></li>
+<li class="book-part">Part Ⅱ: Python</li>
+<li><a class="" href="python-base.html"><span class="header-section-number">5</span> Python基础</a></li>
+<li><a class="" href="python-stat.html"><span class="header-section-number">6</span> 数据统计分析</a></li>
+<li><a class="" href="python-spider.html"><span class="header-section-number">7</span> Python爬虫</a></li>
+<li><a class="" href="ai.html"><span class="header-section-number">8</span> 人工智能</a></li>
+<li class="book-part">Part Ⅲ: 生物信息学</li>
+<li><a class="" href="bio-base.html"><span class="header-section-number">9</span> 基础知识</a></li>
+<li><a class="" href="bio-env.html"><span class="header-section-number">10</span> 环境搭建</a></li>
+<li><a class="" href="genomics.html"><span class="header-section-number">11</span> 基因组学</a></li>
+<li><a class="" href="rnaseq.html"><span class="header-section-number">12</span> RNA-Seq</a></li>
+<li><a class="" href="meta.html"><span class="header-section-number">13</span> 代谢组学</a></li>
+<li><a class="" href="pro.html"><span class="header-section-number">14</span> 蛋白质组</a></li>
+<li><a class="" href="multi.html"><span class="header-section-number">15</span> 多组学</a></li>
+<li class="book-part">Part Ⅳ: 文献阅读</li>
+<li><a class="" href="patho.html"><span class="header-section-number">16</span> 植物病理学</a></li>
+<li><a class="" href="liter-genomics.html"><span class="header-section-number">17</span> 基因组学</a></li>
+<li><a class="" href="liter-rnaseq.html"><span class="header-section-number">18</span> RNA-Seq</a></li>
+<li><a class="" href="liter-meta.html"><span class="header-section-number">19</span> 代谢组学</a></li>
+<li><a class="" href="liter-pro.html"><span class="header-section-number">20</span> 蛋白质组</a></li>
+<li class="book-part">Part Ⅴ: 文章发表</li>
+<li><a class="" href="myarticle.html"><span class="header-section-number">21</span> 文章发表</a></li>
+<li class="book-part">Part Ⅵ: 上课笔记</li>
+<li><a class="" href="class.html"><span class="header-section-number">22</span> 上课笔记</a></li>
+<li class="book-part">Part Ⅶ: 其他</li>
+<li><a class="" href="other.html"><span class="header-section-number">23</span> 其他笔记</a></li>
+<li><a class="" href="references.html">References</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com/lixiang117423/book4xiang">View book source <i class="fab fa-github"></i></a></p>
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="r-base" class="section level1" number="1">
+<h1>
+<span class="header-section-number">第 1 章</span> 语言基础<a class="anchor" aria-label="anchor" href="#r-base"><i class="fas fa-link"></i></a>
+</h1>
+<div id="r的安装" class="section level2" number="1.1">
+<h2>
+<span class="header-section-number">1.1</span> R的安装<a class="anchor" aria-label="anchor" href="#r%E7%9A%84%E5%AE%89%E8%A3%85"><i class="fas fa-link"></i></a>
+</h2>
+<ul>
+<li>各系统下R的安装，<a href="https://cloud.r-project.org/bin/">点击访问</a>。</li>
+<li>安装最新版R</li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="r-base.html#cb1-1" aria-hidden="true" tabindex="-1"></a>sudo sed <span class="sc">-</span>i <span class="st">"s/# deb-src/deb-src/g"</span> <span class="sc">/</span>etc<span class="sc">/</span>apt<span class="sc">/</span>sources.list</span>
+<span id="cb1-2"><a href="r-base.html#cb1-2" aria-hidden="true" tabindex="-1"></a>sudo apt<span class="sc">-</span>get update</span>
+<span id="cb1-3"><a href="r-base.html#cb1-3" aria-hidden="true" tabindex="-1"></a>sudo apt<span class="sc">-</span>get build<span class="sc">-</span>dep r<span class="sc">-</span>base<span class="sc">-</span>dev</span>
+<span id="cb1-4"><a href="r-base.html#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="r-base.html#cb1-5" aria-hidden="true" tabindex="-1"></a>cd <span class="sc">~</span><span class="er">/</span>Downloads</span>
+<span id="cb1-6"><a href="r-base.html#cb1-6" aria-hidden="true" tabindex="-1"></a>wget <span class="sc">-</span>c https<span class="sc">:</span><span class="er">//</span>cran.r<span class="sc">-</span>project.org<span class="sc">/</span>src<span class="sc">/</span>base<span class="sc">/</span>R<span class="dv">-4</span><span class="sc">/</span>R<span class="dv">-4</span>.<span class="dv">1</span>.<span class="fl">0.</span>tar.gz</span>
+<span id="cb1-7"><a href="r-base.html#cb1-7" aria-hidden="true" tabindex="-1"></a>tar <span class="sc">-</span>xf R<span class="dv">-4</span>.<span class="dv">1</span>.<span class="fl">0.</span>tar.gz</span>
+<span id="cb1-8"><a href="r-base.html#cb1-8" aria-hidden="true" tabindex="-1"></a>cd R<span class="dv">-4</span>.<span class="fl">1.0</span></span>
+<span id="cb1-9"><a href="r-base.html#cb1-9" aria-hidden="true" tabindex="-1"></a>.<span class="sc">/</span>configure</span>
+<span id="cb1-10"><a href="r-base.html#cb1-10" aria-hidden="true" tabindex="-1"></a>make <span class="sc">-</span>j9</span>
+<span id="cb1-11"><a href="r-base.html#cb1-11" aria-hidden="true" tabindex="-1"></a>sudo make install</span></code></pre></div>
+<ul>
+<li>安装R包报错：<code>ERROR: failed to lock directory ‘/usr/local/lib/R/library’ for modifying</code>的解决方案：</li>
+</ul>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="r-base.html#cb2-1" aria-hidden="true" tabindex="-1"></a>R CMD INSTALL <span class="sc">--</span>no<span class="sc">-</span>lock <span class="sc">&lt;</span>pkg<span class="sc">&gt;</span></span>
+<span id="cb2-2"><a href="r-base.html#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"Rcpp"</span>, <span class="at">dependencies =</span> <span class="cn">TRUE</span>, <span class="at">INSTALL_opts =</span> <span class="st">'--no-lock'</span>)</span></code></pre></div>
+</div>
+<div id="包的安装更新" class="section level2" number="1.2">
+<h2>
+<span class="header-section-number">1.2</span> 包的安装更新<a class="anchor" aria-label="anchor" href="#%E5%8C%85%E7%9A%84%E5%AE%89%E8%A3%85%E6%9B%B4%E6%96%B0"><i class="fas fa-link"></i></a>
+</h2>
+<ul>
+<li>更新所有R包</li>
+</ul>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="r-base.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">#安装包</span></span>
+<span id="cb3-2"><a href="r-base.html#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"rvcheck"</span>)</span>
+<span id="cb3-3"><a href="r-base.html#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co">#加载包</span></span>
+<span id="cb3-4"><a href="r-base.html#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rvcheck)</span>
+<span id="cb3-5"><a href="r-base.html#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co">#检查R是否有更新</span></span>
+<span id="cb3-6"><a href="r-base.html#cb3-6" aria-hidden="true" tabindex="-1"></a>rvcheck<span class="sc">::</span><span class="fu">check_r</span>()</span>
+<span id="cb3-7"><a href="r-base.html#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 更新所有R包</span></span>
+<span id="cb3-8"><a href="r-base.html#cb3-8" aria-hidden="true" tabindex="-1"></a>rvcheck<span class="sc">::</span><span class="fu">update_all</span>(<span class="at">check_R =</span> <span class="cn">FALSE</span>,<span class="at">which =</span> <span class="fu">c</span>(<span class="st">"CRAN"</span>,<span class="st">"BioC"</span>,<span class="st">"github"</span>)</span></code></pre></div>
+
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="index.html">简介</a></div>
+<div class="next"><a href="r-stat.html"><span class="header-section-number">2</span> 统计分析</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#r-base"><span class="header-section-number">1</span> 语言基础</a></li>
+<li><a class="nav-link" href="#r%E7%9A%84%E5%AE%89%E8%A3%85"><span class="header-section-number">1.1</span> R的安装</a></li>
+<li><a class="nav-link" href="#%E5%8C%85%E7%9A%84%E5%AE%89%E8%A3%85%E6%9B%B4%E6%96%B0"><span class="header-section-number">1.2</span> 包的安装更新</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/lixiang117423/book4xiang/blob/master/1.R-base.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/lixiang117423/book4xiang/edit/master/1.R-base.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>小蓝哥的知识荒原</strong>" was written by 李详. It was last built on 2021年10月1日.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>
